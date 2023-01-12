@@ -7,28 +7,10 @@ import static com.codeborne.selenide.Condition.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.WebElement;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-public class TestSteps {
+public class AddToFavouritesTestSteps {
 
     private String itemName = "";
-
-    @Given("I open {string}")
-    public void openGoogle(String url) {
-        open(url);
-        $(byText("Akceptuj wszystkie pliki cookie")).click();
-        sleep(200);
-    }
-
-    @And("I click on linkText {string}")
-    public void clickOnLinkTextString(String text) {
-        $(byLinkText(text)).click();
-    }
 
     @And("I click on the first item")
     public void clickOnFirstItem() {
