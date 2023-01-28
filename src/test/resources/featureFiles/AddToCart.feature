@@ -1,3 +1,4 @@
+@Cart @Test
 Feature: AddToCart
 
   Scenario: Test the functionality of adding items to the cart
@@ -6,4 +7,3 @@ Feature: AddToCart
     Then I click on linkText "Sklejki"
     And I add the first item to the cart
     Then I check if the item has been added successfully
-

@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 
-public class AddToCartTestSteps {
+public class AddToCartSteps {
 
     private String itemName = "";
 

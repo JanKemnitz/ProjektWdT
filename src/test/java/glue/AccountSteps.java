@@ -2,6 +2,7 @@ package glue;
 
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
+import org.junit.Assert;
 
 import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.*;
@@ -11,9 +12,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-public class AccountTestSteps {
+public class AccountSteps {
 
-    private String configFilePath = "src/test/resources/config.properties";
+    private final String configFilePath = "src/test/resources/config.properties";
 
     @And("I input my login credentials and login")
     public void inputLoginCredetials(){
@@ -49,9 +50,9 @@ public class AccountTestSteps {
 
     @After("@Address")
     public void afterAddress(){
-        GeneralTestSteps.clickOnLinkTextString("Edytuj");
+        GeneralSteps.clickOnLinkTextString("Edytuj");
         changeFieldValue("1");
-        GeneralTestSteps.verifyThatStringIsVisible("1");
+        GeneralSteps.verifyThatStringIsVisible("1");
         sleep(2000);
     }
 }
